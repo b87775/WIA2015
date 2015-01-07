@@ -1,9 +1,11 @@
 /*
-     Name:
-     Date:
-     Class & Section:  WIA-####
+     Name:Jason Woods
+     Date:6 Jan 2015
+     Class & Section:  WIA-0115
      Comments: "HTML5 Canvas Drawing"
  */
+
+window.onload = function(){
 
 
 /*******************************************
@@ -35,8 +37,21 @@ Reminder - set the style first then draw.
 ********************************************/
 
 //Draw Rectangle here
+var part1 = document.getElementById('part1');
+if(part1){
+	var ctx = part1.getContext("2d");
+	if (ctx){
+		ctx.strokeStyle = "black";
+		ctx.fillStyle = "lightblue";
+		ctx.lineWidth = 10;
+							
+		//Draw the rectangle
+		ctx.strokeRect(0, 0, 50, 100);
+		ctx.fillRect(0, 0, 50, 100);
 
 
+	}
+};
 /*******************************************
 PART 2
 
@@ -124,4 +139,4 @@ You must use at least 3 different methods.
 
 // Draw scene here
 
-
+};
