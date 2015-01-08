@@ -67,9 +67,8 @@ Use the arc method
 
 
 //Draw Circle here
-	var part2 = document.getElementById('part2');
-	if(part2){
-		var ctx = part2.getContext("2d");
+	if(part1){
+		var ctx = part1.getContext("2d");
 		if (ctx){
 			ctx.strokeStyle = "black";
 			ctx.fillStyle = "rgba(248,64,61,.5)";
@@ -99,8 +98,41 @@ Height and width and color are up to you.
 
 
 //Draw Star here
+	if(part1){
+		var ctx = part1.getContext("2d");
+		if(ctx){
+			ctx.translate(250, 250);
+			ctx.rotate((Math.PI * 1 / 10));
+			var length = 30;
+			ctx.moveTo(0,0);
+			// make a point, 5 times
+			for (var i = 5; i--;) {
+			    // draw line up
+			    ctx.lineTo(0, length);
+			    // move origin to current same location as pen
+			    ctx.translate(0, length);
+			    // rotate the drawing board the angle of a star point
+			    ctx.rotate((Math.PI * 2 / 10));
+			    // draw line down
+			    ctx.lineTo(0, -length);
+			    // again, move origin to pen...
+			    ctx.translate(0, -length);
+			    // ...and rotate, ready for next arm
+			    // this rotation is the angle between the points, 120°
+			    ctx.rotate(-(Math.PI * 6/ 10));
+			}
+			// last line to connect things up
+			ctx.lineTo(0, length);
+			ctx.closePath();
+			// stroke the path, you could also .fill()
+			ctx.stroke();
+							
+							
 
+		}
+	}
 
+							
 /*******************************************
 PART 4
 
