@@ -215,10 +215,18 @@ Reminder to use the drawImage method for all 3 of the ways.
 //Draw images here
 var part3 = document.getElementById("part3");
 if(part3){
+	// resized image to fit before used. 
 	var ctx = part3.getContext("2d");
 	if(ctx){
 		var img =document.getElementById("logo");
+		// full size image
 		ctx.drawImage(img, 0,0);
+		ctx.height = img.height *0.5;
+		ctx.width = img.width *0.5;
+			//50%
+		ctx.drawImage(img, 200,500, ctx.width, ctx.height);
+		//slice
+		ctx.drawImage(img, 800, 80, 100, 300,70, 500,200, 280);
 	}
 }
 
@@ -235,5 +243,31 @@ You must use at least 3 different methods.
 ********************************************/
 
 // Draw scene here
+	var part4 = document.getElementById("part4");
+
+	if(part4){
+		var ctx = part4.getContext("2d");
+		if(ctx){
+
+			ctx.strokeStyle = "blue";
+			ctx.fillStyle = "green";
+			ctx.lineWidth = 5;
+					
+			//Stroke a simple bezier curve
+			ctx.beginPath();
+			ctx.moveTo(50,200);
+					
+			//bezierCurveTo(cx1, cy1, cx2, cy2, x, y )		
+					
+			ctx.bezierCurveTo(50,100, 200, 100, 200, 200);
+			ctx.bezierCurveTo(200,180,150,180,150,200);
+			ctx.bezierCurveTo(150,180,100,180,100,200);
+			ctx.bezierCurveTo(100,180,50,180,50,200);
+			ctx.closePath();
+			ctx.fill();		
+			ctx.stroke();				
+
+		}
+	}
 
 };
