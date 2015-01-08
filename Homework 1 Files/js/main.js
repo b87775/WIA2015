@@ -37,21 +37,22 @@ Reminder - set the style first then draw.
 ********************************************/
 
 //Draw Rectangle here
-var part1 = document.getElementById('part1');
-if(part1){
-	var ctx = part1.getContext("2d");
-	if (ctx){
-		ctx.strokeStyle = "black";
-		ctx.fillStyle = "lightblue";
-		ctx.lineWidth = 10;
-							
-		//Draw the rectangle
-		ctx.strokeRect(0, 0, 50, 100);
-		ctx.fillRect(0, 0, 50, 100);
+	var part1 = document.getElementById('part1');
+	if(part1){
+		var ctx = part1.getContext("2d");
+		if (ctx){
+			ctx.strokeStyle = "black";
+			ctx.fillStyle = "lightblue";
+			ctx.lineWidth = 1;
+								
+			//Draw the rectangle
+			ctx.fillRect(0, 0, 50, 100);
+			ctx.strokeRect(0, 0, 50, 100);
+			
 
 
-	}
-};
+		}
+	};
 /*******************************************
 PART 2
 
@@ -66,7 +67,22 @@ Use the arc method
 
 
 //Draw Circle here
+	var part2 = document.getElementById('part2');
+	if(part2){
+		var ctx = part2.getContext("2d");
+		if (ctx){
+			ctx.strokeStyle = "black";
+			ctx.fillStyle = "rgba(248,64,61,.5)";
+			ctx.lineWidth = 5;
+			
+			ctx.beginPath();
+			// arc(x,y,r,sA, eA, clockwise or counter);					
+			ctx.arc(50,50,30,0, 2 * Math.PI, true );
+			ctx.fill();
+			ctx.stroke();
 
+		}
+	};
 
 
 
