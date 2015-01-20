@@ -219,6 +219,7 @@ if(part3){
 	if(ctx){
 		var img =document.getElementById("logo");
 		ctx.drawImage(img, 0,0);
+		ctx.drawImage(img, 50,50,150,300);
 	}
 }
 
