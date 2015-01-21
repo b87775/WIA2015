@@ -12,10 +12,22 @@
 		<meta name="apple-mobile-web-app-capable" content="yes" />
 		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/reveal.min.css">
+		<link rel="stylesheet" href="css/theme/sky.css" id="theme">
+		<link rel="stylesheet" href="css/animate.css">
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+		
+		<script src="js/jquery-1.11.2.min.js"></script>
+		<script src="js/jquery.lettering.js"></script>
+		<script src="js/jquery.textillate.js"></script>
 
+		
+		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+		<script>
+			document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+		</script>
 
 		<!--[if lt IE 9]>
 		<script src="lib/js/html5shiv.js"></script>
@@ -28,21 +40,100 @@
 
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
-				<section>
-					<h1>Reveal.js</h1>
-					<h3>The HTML Presentation Framework</h3>
-					<p>
-						<small>Created by <a href="http://hakim.se">Hakim El Hattab</a> / <a href="http://twitter.com/hakimel">@hakimel</a></small>
-					</p>
-				</section>
+				
+                <!--<section> go here-->
+        		<section>
+        			<h2 class="tlt">Textillate.js Plugin Demo</h1>
+        			<h2 class="tada">by Jason Woods</h2>
+
+        		</section>
+              	<section>
+              		<section>
+              			<h3>How do I get it?</h3>
+
+        				<p>URL: <a href="http://jschr.github.io/textillate/">http://jschr.github.io/textillate/</a></p>
+              		</section>
+              		<section>
+              			<iframe src="http://jschr.github.io/textillate/" height="600" width="800"></iframe>
+              		</section>
+        			
+
+        		</section>
+        		<section>
+        			<section>
+        				<h3>How do I use it?</h3>
+        			</section>
+        			<section>
+        				<h4>Dependencies</h4>
+	        			<ul>
+	        				<li>
+	        					<a href="Jquery.com">Jquery (I used version 1.9)</a>
+	        				</li>
+	        				<li>
+	        					<a href="http://daneden.github.io/animate.css/">animate.css</a>
+	        				</li>
+	        				<li>
+	        					<a href="http://letteringjs.com/">Lettering.js</a>
+	        				</li>
+        				</ul>
+        			</section>
+        			<section>
+        				<h3>Added dependencies to html page.</h3>
+        				<pre><code>
+<link rel="stylesheet" href="css/animate.css">
+<script src="js/jquery-1.11.2.min.js"></script>
+<script src="js/jquery.lettering.js"></script>
+<script src="js/jquery.textillate.js"></script>       					
+        				</code></pre>
+        			</section>
+        			<section>
+        			<h3>Activate on a class Selector</h3>
+        			<pre><code>
+(function(){
+	$('.tlt').textillate();
+})
+						
+        			</code></pre>
+        		</section>
+        			
+        		</section>
+        		
+              
+    		
+                	
 
 			</div>
 
 		</div>
 
 		<script src="lib/js/head.min.js"></script>
-		<script src="js/reveal.js"></script>
+		<script src="js/reveal.min.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
 
+		<script>
 
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'zoom', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+	<script src="js/main.js"></script>
 	</body>
 </html>
