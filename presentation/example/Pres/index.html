@@ -87,18 +87,68 @@
         				</code></pre>
         			</section>
         			<section>
-        			<h3>Activate on a class Selector</h3>
-        			<pre><code>
-(function(){
-	$('.tlt').textillate();
-})
-						
-        			</code></pre>
-        		</section>
+        				<h3>Create element that you want to animate</h3>
+        				<pre><code>
+<h1 class="tlt">Your Text here ! </h1>
+        				</code></pre>
+        			</section>
+        			<section>
+	        			<h3>Activate on a class Selector</h3>
+	        			<pre><code>
+	(function(){
+		$('.tlt').textillate();
+	})
+							
+	        			</code></pre>
+        			</section>
         			
         		</section>
-        		
-              
+        		<section>
+        			<h2>Some of the available animation options</h2>
+        			<ul>
+        				<li>
+        					Flash
+        				</li>
+        				<li>bounce</li>
+        				<li>shake</li>
+        				<li>tada</li>
+        				<li>swing</li>
+        				<li>wobble</li>
+        				<li>pulse</li>
+        				<li>flip</li>
+        				<li>flipInX</li>
+        				<li>flipInY</li>
+        				<li>More listed on Site</li>
+        			</ul>
+        		</section> 
+        		<section>
+        			<h3>Textillate trigger events</h3>
+        			<ul>
+        				<li>start.tlt - triggered when textillate starts</li>
+        				<li>inAnimationBegin.tlt - triggered when the in animation begins</li>
+								<li>inAnimationEnd.tlt - triggered when the in animation ends</li>
+								<li>outAnimationBegin.tlt - triggered when the out animation begins</li>
+								<li>outAnimationEnd.tlt - triggered when the in animation ends</li>
+								<li>end.tlt - triggered when textillate ends</li>
+							
+        			</ul>
+        		</section> 
+        		<section>
+        			<h3>Methods</h3>
+        			<ul>
+        				<li>$element.textillate('start') - Manually start/restart textillate</li>
+        				<li>$element.textillate('stop') - Manually pause/stop textillate</li>
+        				<li>$element.textillate('in') - Trigger the current text's in animation</li>
+        				<li>$element.textillate('out') - Trigger the current text's out animation</li>
+        			</ul>
+        		</section>
+						<section>
+        			<h2 class="tlt">Click me</h1>
+        			<h2 class="tada">Click Me Too!!</h2>
+        			<p>By Jason Woods</p>
+
+        		</section>
+
     		
                 	
 
