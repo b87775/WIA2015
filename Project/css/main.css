@@ -1,7 +1,17 @@
+body{
+  font-family: 'Ubuntu', sans-serif;
+}
+
 .mainHeader{
   text-align: center;
-  background: url('../images/red_background.jpg');
-  background-size: cover;
+  background: #4c4c4c;
+  background: -moz-radial-gradient(center, ellipse cover,  #4c4c4c 0%, #595959 4%, #111111 60%, #000000 74%, #000000 74%, #2b2b2b 76%, #1c1c1c 91%, #131313 100%);
+  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#4c4c4c), color-stop(4%,#595959), color-stop(60%,#111111), color-stop(74%,#000000), color-stop(74%,#000000), color-stop(76%,#2b2b2b), color-stop(91%,#1c1c1c), color-stop(100%,#131313));
+  background: -webkit-radial-gradient(center, ellipse cover,  #4c4c4c 0%,#595959 4%,#111111 60%,#000000 74%,#000000 74%,#2b2b2b 76%,#1c1c1c 91%,#131313 100%);
+  background: -o-radial-gradient(center, ellipse cover,  #4c4c4c 0%,#595959 4%,#111111 60%,#000000 74%,#000000 74%,#2b2b2b 76%,#1c1c1c 91%,#131313 100%);
+  background: -ms-radial-gradient(center, ellipse cover,  #4c4c4c 0%,#595959 4%,#111111 60%,#000000 74%,#000000 74%,#2b2b2b 76%,#1c1c1c 91%,#131313 100%);
+  background: radial-gradient(ellipse at center,  #4c4c4c 0%,#595959 4%,#111111 60%,#000000 74%,#000000 74%,#2b2b2b 76%,#1c1c1c 91%,#131313 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4c4c4c', endColorstr='#131313',GradientType=1 );
   color:#fff;
 }
 .break{
@@ -11,17 +21,73 @@
   max-width: 200px;
   border-color: #ef4035;
 }
+.fullLine{
+  border-top: 1px solid;
+  border-bottom: 1px solid;
+  height: 2px;
+  width:100%;
+  border-color: #2c3e50; 
+}
 
-.headerP{
-  font-family: 'Ubuntu', sans-serif;
-  font-size: 30px;
-  line-height: 30px;
-  color:#fff;
-}
-.blue{
-  color: #0099CC;
-}
 
 #background2{
-  background:gray;
+  background: #ECF0F1;
+  height:350px;
+  padding: 20px;
+}
+.subHeading{
+  color:#E74C3C;
+}
+
+.center{
+  text-align: center;
+}
+.svgImg{
+  position: relative;
+  left:10px;
+}
+
+/* Map */
+.mapContainer{
+  background: url("../images/map/idahomap.jpg") no-repeat 0px 0px ;
+  height:600px;
+  width:400px;
+  position: relative;
+  color:#fff;
+}
+.mapContainer a.dot{
+  background:url("../images/map/dots.png") no-repeat 0px 0px;
+  cursor: pointer;
+  display: block;
+  height:20px;
+  width:20px;
+  position: absolute;
+}
+.mapContainer a.dot:hover{
+  background-position: 0px -20px;
+}
+.mapContainer a.dot.selected{
+  background-position: 0px -40px;
+}
+#foothills, #wedding, #meridian{
+  display:none;
+}
+.imgContainer{
+  position: absolute;
+  top: 400px;
+  left:200px;
+}
+footer{
+  height:50px;
+  width :100%;
+  text-align: center;
+  text-transform: uppercase;
+  background: url('../images/red_background.jpg');
+  color:#fff;
+}
+footer > section > ul{
+  list-style-type: none;
+}
+footer > section > ul > li > a{
+  color:#fff;
 }
