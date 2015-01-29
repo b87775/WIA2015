@@ -30,7 +30,10 @@ $(document).ready(function(){
   });
 
   //Map Features
-
+  $("#map").on("click", function(){
+    $(".mapContainer").slideToggle( "slow" );
+  });
+  
   $("a.dot").hover(function(){
     //alert($(this).attr('loc'));
     $("a.dot").removeClass("selected");

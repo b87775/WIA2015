@@ -28,12 +28,24 @@ body{
   width:100%;
   border-color: #2c3e50; 
 }
+.light{
+  border-color: #ef4035 ;
+  color:#ECF0F1;
+}
 
 
 #background2{
   background: #ECF0F1;
   height:350px;
   padding: 20px;
+}
+#background3{
+  padding:20px;
+  background:#2980b9;
+}
+#background4{
+  padding:20px;
+  background:#2c3e50;
 }
 .subHeading{
   color:#E74C3C;
@@ -49,6 +61,7 @@ body{
 
 /* Map */
 .mapContainer{
+  display:none;
   background: url("../images/map/idahomap.jpg") no-repeat 0px 0px ;
   height:600px;
   width:400px;
