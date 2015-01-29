@@ -90,6 +90,9 @@ body{
   top: 400px;
   left:200px;
 }
+.chart{
+  background:black;
+}
 footer{
   height:50px;
   width :100%;
