@@ -1,5 +1,4 @@
-if(Modernizr.canvas){
-	alert("itworks");
-}else{
-	alert('doesnt work');
-}
+Modernizr.load({
+	test: Modernizr.canvas,
+	nope:'http://flashcanvas.net/bin/flashcanvas.js'
+});

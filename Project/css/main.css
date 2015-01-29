@@ -98,12 +98,11 @@ footer{
   width :100%;
   text-align: center;
   text-transform: uppercase;
-  background: url('../images/red_background.jpg');
-  color:#fff;
+  background: #ECF0F1;
 }
 footer > section > ul{
   list-style-type: none;
 }
 footer > section > ul > li > a{
-  color:#fff;
+  color:#E74C3C;
 }
